@@ -33,6 +33,8 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mapreduce.*;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,6 +51,7 @@ public abstract class HadoopUtil {
      * Create a map and reduce Hadoop job.
      * @param inputPath The input {@link org.apache.hadoop.fs.Path}
      * @param outputPath The output {@link org.apache.hadoop.fs.Path}
+     * @param driver The driver name
      * @param mapper The {@link org.apache.hadoop.mapreduce.Mapper} class to use
      * @param mapperKey The {@link org.apache.hadoop.io.Writable} key class.  If the Mapper is a no-op, this value may be null
      * @param mapperValue The {@link org.apache.hadoop.io.Writable} value class.  If the Mapper is a no-op, this value may be null
@@ -60,8 +63,6 @@ public abstract class HadoopUtil {
      *
      * @see #prepareJob(org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path, Class, Class, Class, Class, Class, Class, Class)
      */
-
-
     public static Job prepareJob(Path inputPath,
                                  Path outputPath,
                                  Class<? extends Configured> driver,
@@ -89,5 +90,89 @@ public abstract class HadoopUtil {
 
         return job;
     }
-}
 
+
+    /**
+     * Create a map and reduce Hadoop job.
+     * @param multiInputPath1 The input {@link org.apache.hadoop.fs.Path}
+     * @param multiInputPath2 The input {@link org.apache.hadoop.fs.Path}
+     * @param outputPath The output {@link org.apache.hadoop.fs.Path}
+     * @param driver The driver name
+     * @param mapper The {@link org.apache.hadoop.mapreduce.Mapper} class to use
+     * @param mapperKey The {@link org.apache.hadoop.io.Writable} key class.  If the Mapper is a no-op, this value may be null
+     * @param mapperValue The {@link org.apache.hadoop.io.Writable} value class.  If the Mapper is a no-op, this value may be null
+     * @return The {@link org.apache.hadoop.mapreduce.Job}.
+     * @throws IOException if there is a problem with the IO.
+     *
+     * @see #prepareJob(org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path, Class, Class, Class, Class)
+     */
+    public static Job prepareJob(Path multiInputPath1,
+                                 Path multiInputPath2,
+                                 Path outputPath,
+                                 Class<? extends Configured> driver,
+                                 Class<? extends Mapper> mapper,
+                                 Class<? extends Writable> mapperKey,
+                                 Class<? extends Writable> mapperValue) throws IOException {
+
+        Job job = new Job();
+        job.setJarByClass(driver);
+
+        job.setMapperClass(mapper);
+
+        job.setMapOutputKeyClass(mapperKey);
+        job.setMapOutputValueClass(mapperValue);
+
+        MultipleInputs.addInputPath(job, multiInputPath1, TextInputFormat.class);
+        MultipleInputs.addInputPath(job, multiInputPath2, TextInputFormat.class);
+        FileOutputFormat.setOutputPath(job, outputPath);
+
+        return job;
+    }
+
+    /**
+     * Create a map and reduce Hadoop job.
+     * @param multiInputPath1 The input {@link org.apache.hadoop.fs.Path}
+     * @param multiInputPath2 The input {@link org.apache.hadoop.fs.Path}
+     * @param outputPath The output {@link org.apache.hadoop.fs.Path}
+     * @param driver The driver name
+     * @param mapper1 The {@link org.apache.hadoop.mapreduce.Mapper} class to use
+     * @param mapper2 The {@link org.apache.hadoop.mapreduce.Mapper} class to use
+     * @param mapperKey The {@link org.apache.hadoop.io.Writable} key class.  If the Mapper is a no-op, this value may be null
+     * @param mapperValue The {@link org.apache.hadoop.io.Writable} value class.  If the Mapper is a no-op, this value may be null
+     * @param reducer The {@link org.apache.hadoop.mapreduce.Reducer} to use
+     * @param reducerKey The reducer key class.
+     * @param reducerValue The reducer value class.
+     * @return The {@link org.apache.hadoop.mapreduce.Job}.
+     * @throws java.io.IOException if there is a problem with the IO.
+     *
+     * @see #prepareJob(org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path, Class, Class, Class, Class, Class, Class, Class, Class)
+     */
+    public static Job prepareJob(Path multiInputPath1,
+                                 Path multiInputPath2,
+                                 Path outputPath,
+                                 Class<? extends Configured> driver,
+                                 Class<? extends Mapper> mapper1,
+                                 Class<? extends Mapper> mapper2,
+                                 Class<? extends Writable> mapperKey,
+                                 Class<? extends Writable> mapperValue,
+                                 Class<? extends Reducer> reducer,
+                                 Class<? extends Writable> reducerKey,
+                                 Class<? extends Writable> reducerValue) throws IOException {
+        Job job = new Job();
+        job.setJarByClass(driver);
+
+        job.setReducerClass(reducer);
+
+        job.setMapOutputKeyClass(mapperKey);
+        job.setMapOutputValueClass(mapperValue);
+
+        job.setOutputKeyClass(reducerKey);
+        job.setOutputValueClass(reducerValue);
+
+        MultipleInputs.addInputPath(job, multiInputPath1, TextInputFormat.class, mapper1);
+        MultipleInputs.addInputPath(job, multiInputPath2, TextInputFormat.class, mapper2);
+        FileOutputFormat.setOutputPath(job, outputPath);
+
+        return job;
+    }
+}
