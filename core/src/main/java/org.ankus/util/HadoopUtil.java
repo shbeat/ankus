@@ -49,39 +49,18 @@ public abstract class HadoopUtil {
      * Create a map and reduce Hadoop job.
      * @param inputPath The input {@link org.apache.hadoop.fs.Path}
      * @param outputPath The output {@link org.apache.hadoop.fs.Path}
-     * @param inputFormat The {@link org.apache.hadoop.mapreduce.InputFormat}
      * @param mapper The {@link org.apache.hadoop.mapreduce.Mapper} class to use
      * @param mapperKey The {@link org.apache.hadoop.io.Writable} key class.  If the Mapper is a no-op, this value may be null
      * @param mapperValue The {@link org.apache.hadoop.io.Writable} value class.  If the Mapper is a no-op, this value may be null
      * @param reducer The {@link org.apache.hadoop.mapreduce.Reducer} to use
      * @param reducerKey The reducer key class.
      * @param reducerValue The reducer value class.
-     * @param outputFormat The {@link org.apache.hadoop.mapreduce.OutputFormat}.
-     * @param conf The {@link org.apache.hadoop.conf.Configuration} to use.
      * @return The {@link org.apache.hadoop.mapreduce.Job}.
      * @throws IOException if there is a problem with the IO.
      *
-     * @see #getCustomJobName(String, org.apache.hadoop.mapreduce.JobContext, Class, Class)
-     * @see #prepareJob(org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path, Class, Class, Class, Class, Class, org.apache.hadoop.conf.Configuration)
+     * @see #prepareJob(org.apache.hadoop.fs.Path, org.apache.hadoop.fs.Path, Class, Class, Class, Class, Class, Class, Class)
      */
 
-//    Job job1 = new Job();
-//    job1.setJarByClass(BooleanSetDriver.class);
-//
-//    job1.setMapperClass(BooleanSetMapper.class);
-//    job1.setReducerClass(BooleanSetReducer.class);
-//
-//    job1.setMapOutputKeyClass(Text.class);
-//    job1.setMapOutputValueClass(TextIntegerPairWritableComparable.class);
-//
-//    job1.setOutputKeyClass(TextTwoWritableComparable.class);
-//    job1.setOutputValueClass(TextTwoWritableComparable.class);
-//
-//    FileInputFormat.setInputPaths(job1, new Path(input));
-//    FileOutputFormat.setOutputPath(job1, prepareOutputPath);
-//
-//    job1.getConfiguration().set(Constants.DELIMITER, delimiter);
-//    job1.getConfiguration().set(Constants.KEY_INDEX, keyIndex);
 
     public static Job prepareJob(Path inputPath,
                                  Path outputPath,
