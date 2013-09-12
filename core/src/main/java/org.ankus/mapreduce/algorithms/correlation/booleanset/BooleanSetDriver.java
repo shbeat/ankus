@@ -26,8 +26,6 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.*;
-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 import org.slf4j.Logger;
@@ -102,20 +100,9 @@ public class BooleanSetDriver extends Configured implements Tool {
         logger.info("Prepare output directory is [" + prepareOutputPath.toString() + "]");
         logger.info("==========================================================================================");
 
-		Job job1 = new Job();
-        job1.setJarByClass(BooleanSetDriver.class);
-
-        job1.setMapperClass(BooleanSetMapper.class);
-        job1.setReducerClass(BooleanSetReducer.class);
-
-        job1.setMapOutputKeyClass(Text.class);
-        job1.setMapOutputValueClass(TextIntegerPairWritableComparable.class);
-
-        job1.setOutputKeyClass(TextTwoWritableComparable.class);
-        job1.setOutputValueClass(TextIntegerTwoPairsWritableComparable.class);
-
-		FileInputFormat.setInputPaths(job1, new Path(input));
-		FileOutputFormat.setOutputPath(job1, prepareOutputPath);
+        Job job1 = HadoopUtil.prepareJob(new Path(input), prepareOutputPath, BooleanSetDriver.class,
+                BooleanSetMapper.class, Text.class, TextIntegerPairWritableComparable.class,
+                BooleanSetReducer.class, TextTwoWritableComparable.class, TextIntegerTwoPairsWritableComparable.class);
 
 		job1.getConfiguration().set(Constants.DELIMITER, delimiter);
         job1.getConfiguration().set(Constants.KEY_INDEX, keyIndex);
@@ -124,20 +111,9 @@ public class BooleanSetDriver extends Configured implements Tool {
         if(!(step1)) return -1;
 
 
-        Job job2 = new Job();
-        job2.setJarByClass(BooleanSetDriver.class);
-
-        job2.setMapperClass(CalculationBooleanSetMapper.class);
-        job2.setReducerClass(CalculationBooleanSetReducer.class);
-
-        job2.setMapOutputKeyClass(TextTwoWritableComparable.class);
-        job2.setMapOutputValueClass(TextIntegerTwoPairsWritableComparable.class);
-
-        job2.setOutputKeyClass(TextTwoWritableComparable.class);
-        job2.setOutputValueClass(DoubleWritable.class);
-
-        FileInputFormat.setInputPaths(job2, prepareOutputPath);
-        FileOutputFormat.setOutputPath(job2, new Path(output));
+        Job job2 = HadoopUtil.prepareJob(prepareOutputPath, new Path(output), BooleanSetDriver.class,
+                CalculationBooleanSetMapper.class, TextTwoWritableComparable.class, TextIntegerTwoPairsWritableComparable.class,
+                CalculationBooleanSetReducer.class, TextTwoWritableComparable.class, DoubleWritable.class);
 
         job2.getConfiguration().set(Constants.DELIMITER, delimiter);
         job2.getConfiguration().set(Constants.ALGORITHM_OPTION, algorithmOption);
