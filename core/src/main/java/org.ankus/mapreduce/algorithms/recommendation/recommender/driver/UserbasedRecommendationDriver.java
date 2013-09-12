@@ -29,10 +29,7 @@ import org.ankus.mapreduce.algorithms.recommendation.recommender.neighborhood.ag
 import org.ankus.mapreduce.algorithms.recommendation.recommender.recommendation.userbased.PredictionItemsMapper;
 import org.ankus.mapreduce.algorithms.recommendation.recommender.recommendation.userbased.RecommendationReducer;
 import org.ankus.mapreduce.algorithms.recommendation.recommender.recommendation.userbased.UserSimilarityMapper;
-import org.ankus.util.AnkusUtils;
-import org.ankus.util.ArgumentsConstants;
-import org.ankus.util.Constants;
-import org.ankus.util.Usage;
+import org.ankus.util.*;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.FileSystem;
@@ -42,8 +39,6 @@ import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
-import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
@@ -103,12 +98,13 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
         fileSystem = FileSystem.get(new Configuration());
 
         URI fileSystemUri = fileSystem.getUri();
-        Path itemListOutputPath = new Path(fileSystemUri + "/" + prepareOutput + "itemlist");
-        Path candidateItemListOutput = new Path(fileSystemUri + "/" + prepareOutput + "candidate");
-        Path switchSimilarityOutput1 = new Path(fileSystemUri + "/" + prepareOutput + "switchSimilarity1");
-        Path switchSimilarityOutput2 = new Path(fileSystemUri + "/" + prepareOutput + "switchSimilarity2");
-        Path aggregateSwitchSimOutput = new Path(fileSystemUri + "/" + prepareOutput + "aggregate");
-        Path neighborAllDataOutput = new Path(fileSystemUri + "/" + prepareOutput + "neighborhood");
+        String outputURI = fileSystemUri + "/" + prepareOutput;
+        Path itemListOutputPath = new Path(outputURI + "itemlist");
+        Path candidateItemListOutput = new Path(outputURI + "candidate");
+        Path switchSimilarityOutput1 = new Path(outputURI + "switchSimilarity1");
+        Path switchSimilarityOutput2 = new Path(outputURI + "switchSimilarity2");
+        Path aggregateSwitchSimOutput = new Path(outputURI + "aggregate");
+        Path neighborAllDataOutput = new Path(outputURI + "neighborhood");
 
         /**
          * Step 1.
@@ -120,17 +116,9 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
         logger.info("       Output directory [" + itemListOutputPath.toString() + "]");
         logger.info("==========================================================================================");
 
-        Job job1 = new Job();
-        job1.setJarByClass(UserbasedRecommendationDriver.class);
-
-        job1.setMapperClass(ItemListMapper.class);
-        job1.setReducerClass(ItemListReducer.class);
-
-        job1.setMapOutputKeyClass(Text.class);
-        job1.setMapOutputValueClass(NullWritable.class);
-
-        job1.setOutputKeyClass(Text.class);
-        job1.setOutputValueClass(NullWritable.class);
+        Job job1 = HadoopUtil.prepareJob(new Path(input), itemListOutputPath, UserbasedRecommendationDriver.class,
+                ItemListMapper.class, Text.class, NullWritable.class,
+                ItemListReducer.class, Text.class, NullWritable.class);
 
         FileInputFormat.setInputPaths(job1, new Path(input));
         FileOutputFormat.setOutputPath(job1, itemListOutputPath);
@@ -151,20 +139,9 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
         logger.info("       Output directory [" + switchSimilarityOutput1.toString() + "]");
         logger.info("==========================================================================================");
 
-        Job job2 = new Job();
-        job2.setJarByClass(UserbasedRecommendationDriver.class);
-
-        job2.setMapperClass(Neighborhood1Mapper.class);
-        job2.setReducerClass(Neighborhood1Reducer.class);
-
-        job2.setMapOutputKeyClass(Text.class);
-        job2.setMapOutputValueClass(Text.class);
-
-        job2.setOutputKeyClass(Text.class);
-        job2.setOutputValueClass(Text.class);
-
-        FileInputFormat.setInputPaths(job2, similarDataInput);
-        FileOutputFormat.setOutputPath(job2, switchSimilarityOutput1);
+        Job job2 = HadoopUtil.prepareJob(new Path(similarDataInput), switchSimilarityOutput1, UserbasedRecommendationDriver.class,
+                Neighborhood1Mapper.class, Text.class, Text.class,
+                Neighborhood1Reducer.class, Text.class, Text.class);
 
         job2.getConfiguration().set(Constants.DELIMITER, delimiter);
 
@@ -181,20 +158,9 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
         logger.info("       Output directory [" + switchSimilarityOutput2.toString() + "]");
         logger.info("==========================================================================================");
 
-        Job job3 = new Job();
-        job3.setJarByClass(UserbasedRecommendationDriver.class);
-
-        job3.setMapperClass(Neighborhood2Mapper.class);
-        job3.setReducerClass(Neighborhood2Reducer.class);
-
-        job3.setMapOutputKeyClass(Text.class);
-        job3.setMapOutputValueClass(Text.class);
-
-        job3.setOutputKeyClass(Text.class);
-        job3.setOutputValueClass(Text.class);
-
-        FileInputFormat.setInputPaths(job3, similarDataInput);
-        FileOutputFormat.setOutputPath(job3, switchSimilarityOutput2);
+        Job job3 = HadoopUtil.prepareJob(new Path(similarDataInput), switchSimilarityOutput2, UserbasedRecommendationDriver.class,
+                Neighborhood2Mapper.class, Text.class, Text.class,
+                Neighborhood2Reducer.class, Text.class, Text.class);
 
         job3.getConfiguration().set(Constants.DELIMITER, delimiter);
 
@@ -211,17 +177,8 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
         logger.info("       Output directory [" + aggregateSwitchSimOutput.toString() + "]");
         logger.info("==========================================================================================");
 
-        Job job4 = new Job();
-        job4.setJarByClass(UserbasedRecommendationDriver.class);
-
-        job4.setMapperClass(AggregateMapper.class);
-
-        job4.setMapOutputKeyClass(NullWritable.class);
-        job4.setMapOutputValueClass(Text.class);
-
-        MultipleInputs.addInputPath(job4, switchSimilarityOutput1, TextInputFormat.class);
-        MultipleInputs.addInputPath(job4, switchSimilarityOutput2, TextInputFormat.class);
-        FileOutputFormat.setOutputPath(job4, aggregateSwitchSimOutput);
+        Job job4 = HadoopUtil.prepareJob(switchSimilarityOutput1, switchSimilarityOutput2, aggregateSwitchSimOutput, UserbasedRecommendationDriver.class,
+                AggregateMapper.class, NullWritable.class, Text.class);
 
         boolean step4 = job4.waitForCompletion(true);
         if(!(step4)) return -1;
@@ -237,20 +194,9 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
         logger.info("       Output directory [" + neighborAllDataOutput.toString() + "]");
         logger.info("==========================================================================================");
 
-        Job job5 = new Job();
-        job5.setJarByClass(UserbasedRecommendationDriver.class);
-
-        job5.setReducerClass(NeighborhoodReducer.class);
-
-        job5.setMapOutputKeyClass(Text.class);
-        job5.setMapOutputValueClass(Text.class);
-
-        job5.setOutputKeyClass(Text.class);
-        job5.setOutputValueClass(Text.class);
-
-        MultipleInputs.addInputPath(job5, new Path(input), TextInputFormat.class, MovielensMapper.class);
-        MultipleInputs.addInputPath(job5, aggregateSwitchSimOutput, TextInputFormat.class, NeighborhoodMapper.class);
-        FileOutputFormat.setOutputPath(job5, neighborAllDataOutput);
+        Job job5 = HadoopUtil.prepareJob(new Path(input), aggregateSwitchSimOutput, neighborAllDataOutput, UserbasedRecommendationDriver.class,
+                MovielensMapper.class, NeighborhoodMapper.class, Text.class, Text.class,
+                NeighborhoodReducer.class, Text.class, Text.class);
 
         job5.getConfiguration().set(Constants.DELIMITER, delimiter);
 
@@ -268,20 +214,9 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
         logger.info("       Output directory [" + candidateItemListOutput.toString() + "]");
         logger.info("==========================================================================================");
 
-        Job job6 = new Job();
-        job6.setJarByClass(UserbasedRecommendationDriver.class);
-
-        job6.setMapperClass(PredictionMapper.class);
-        job6.setReducerClass(PredictionReducer.class);
-
-        job6.setMapOutputKeyClass(Text.class);
-        job6.setMapOutputValueClass(TextTwoWritableComparable.class);
-
-        job6.setOutputKeyClass(Text.class);
-        job6.setOutputValueClass(Text.class);
-
-        FileInputFormat.setInputPaths(job6, new Path(input));
-        FileOutputFormat.setOutputPath(job6, candidateItemListOutput);
+        Job job6 = HadoopUtil.prepareJob(new Path(input), candidateItemListOutput, UserbasedRecommendationDriver.class,
+                PredictionMapper.class, Text.class, TextTwoWritableComparable.class,
+                PredictionReducer.class, Text.class, Text.class);
 
         job6.getConfiguration().set(Constants.DELIMITER, delimiter);
         job6.getConfiguration().set("itemListPath", itemListOutputPath.toString());
@@ -300,20 +235,9 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
         logger.info("       Output directory [" + output + "]");
         logger.info("==========================================================================================");
 
-        Job job7 = new Job();
-        job7.setJarByClass(UserbasedRecommendationDriver.class);
-
-        job7.setReducerClass(RecommendationReducer.class);
-
-        job7.setMapOutputKeyClass(Text.class);
-        job7.setMapOutputValueClass(Text.class);
-
-        job7.setOutputKeyClass(Text.class);
-        job7.setOutputValueClass(DoubleWritable.class);
-
-        MultipleInputs.addInputPath(job7, candidateItemListOutput, TextInputFormat.class, PredictionItemsMapper.class);
-        MultipleInputs.addInputPath(job7, neighborAllDataOutput, TextInputFormat.class, UserSimilarityMapper.class);
-        FileOutputFormat.setOutputPath(job7, new Path(output));
+        Job job7 = HadoopUtil.prepareJob(candidateItemListOutput, neighborAllDataOutput, new Path(output), UserbasedRecommendationDriver.class,
+                PredictionItemsMapper.class, UserSimilarityMapper.class, Text.class, Text.class,
+                RecommendationReducer.class, Text.class, DoubleWritable.class);
 
         job7.getConfiguration().set(Constants.DELIMITER, delimiter);
 
