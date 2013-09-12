@@ -63,7 +63,6 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
     private String similarDataInput = null;
     private String output = null;
     private String delimiter = null;
-
     private FileSystem fileSystem = null;
 
     // SLF4J Logging
