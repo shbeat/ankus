@@ -120,9 +120,6 @@ public class UserbasedRecommendationDriver extends Configured implements Tool {
                 ItemListMapper.class, Text.class, NullWritable.class,
                 ItemListReducer.class, Text.class, NullWritable.class);
 
-        FileInputFormat.setInputPaths(job1, new Path(input));
-        FileOutputFormat.setOutputPath(job1, itemListOutputPath);
-
         job1.getConfiguration().set(Constants.DELIMITER, delimiter);
 
         boolean step1 = job1.waitForCompletion(true);
