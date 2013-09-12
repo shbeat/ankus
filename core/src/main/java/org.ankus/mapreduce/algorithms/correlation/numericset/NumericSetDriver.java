@@ -18,18 +18,14 @@
 package org.ankus.mapreduce.algorithms.correlation.numericset;
 
 import org.ankus.io.*;
-import org.ankus.util.AnkusUtils;
-import org.ankus.util.ArgumentsConstants;
-import org.ankus.util.Constants;
-import org.ankus.util.Usage;
+import org.ankus.util.*;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 import org.slf4j.Logger;
@@ -96,42 +92,19 @@ public class NumericSetDriver extends Configured implements Tool {
         logger.info("Prepare output directory is [" + prepareOutputPath.toString() + "]");
         logger.info("==========================================================================================");
 
-        Job job1 = new Job();
-        job1.setJarByClass(NumericSetDriver.class);
-       
-        job1.setMapperClass(NumericSetMapper.class); 	
-        job1.setReducerClass(NumericSetReducer.class);    
-        
-        job1.setMapOutputKeyClass(Text.class);
-        job1.setMapOutputValueClass(TextDoublePairWritableComparable.class);
-        
-        job1.setOutputKeyClass(TextTwoWritableComparable.class);
-        job1.setOutputValueClass(TextDoubleTwoPairsWritableComparable.class);
-		
-		FileInputFormat.setInputPaths(job1, new Path(input));
-		FileOutputFormat.setOutputPath(job1, prepareOutputPath);
+        Job job1 = HadoopUtil.prepareJob(new Path(input), prepareOutputPath, NumericSetDriver.class,
+                NumericSetMapper.class, Text.class, TextDoublePairWritableComparable.class,
+                NumericSetReducer.class, TextTwoWritableComparable.class, TextDoubleTwoPairsWritableComparable.class);
 
 		job1.getConfiguration().set(Constants.KEY_INDEX, keyIndex);
 		job1.getConfiguration().set(Constants.DELIMITER, delimiter);
        
         boolean step1 = job1.waitForCompletion(true);
         if(!(step1)) return -1;
-        
-        
-        Job job2 = new Job();           
-        job2.setJarByClass(NumericSetDriver.class);
-       
-        job2.setMapperClass(CalculationNumericSetMapper.class);
-        job2.setReducerClass(CalculationNumericSetReducer.class);
-        
-        job2.setMapOutputKeyClass(TextTwoWritableComparable.class);
-        job2.setMapOutputValueClass(TextDoubleTwoPairsWritableComparable.class);
-        
-        job2.setOutputKeyClass(IntegerTwoWritableComparable.class);
-        job2.setOutputValueClass(TextDoubleTwoPairsWritableComparable.class);
 
-        FileInputFormat.setInputPaths(job2, prepareOutputPath);
-        FileOutputFormat.setOutputPath(job2, new Path(output));
+        Job job2 = HadoopUtil.prepareJob(prepareOutputPath, new Path(output), NumericSetDriver.class,
+                CalculationNumericSetMapper.class, TextTwoWritableComparable.class, TextDoubleTwoPairsWritableComparable.class,
+                CalculationNumericSetReducer.class, TextTwoWritableComparable.class, DoubleWritable.class);
 
         job2.getConfiguration().set(Constants.DELIMITER, delimiter);
         job2.getConfiguration().set(Constants.ALGORITHM_OPTION, algorithmOption);
