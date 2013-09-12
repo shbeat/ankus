@@ -218,7 +218,7 @@
         <!--  ========  -->
         <dependency>
             <groupId>hadoop</groupId>
-            <artifactId>hadoop-core</artifactId>
+            <artifactId>hadoop</artifactId>
             <version>${hadoop.version}</version>
         </dependency>
 
