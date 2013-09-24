@@ -98,6 +98,10 @@ public class TextTwoWritableComparable implements WritableComparable<TextTwoWrit
 
     @Override
     public int compareTo(TextTwoWritableComparable textTwoWritableComparable) {
-        return 0;
+        int compareToParam = text1.compareTo(textTwoWritableComparable.text1);
+        if(compareToParam != 0) {
+            return compareToParam;
+        }
+        return text2.compareTo(textTwoWritableComparable.text2);
     }
 }
