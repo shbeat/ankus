@@ -1,7 +1,7 @@
 ankus
 =====
 
-What is Ankus?
+What is Ankus?\n
 Ankus is an open source data mining / machine learning  based MapReduce that supports a variety of advanced algorithms. Apache Mahout have the same goal with us, Mahout complicated convert to Sequence files and configure parameters for a wide variety of machine learning algorithms.
 But as Ankus can see below,
 Almost do not need to generate input dataset
