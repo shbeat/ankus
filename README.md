@@ -29,7 +29,7 @@ Feauture
 Currently, we release Ankus 0.0.1 version on 12, September, 2013
 
 1. Join community forum! 
-https://www.facebook.com/groups/478048298938975
+https://www.facebook.com/groups/openankus
 
 2. Join facebook page! 
 https://www.facebook.com/openankus
