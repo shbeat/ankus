@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6e006b1-bd0c-4127-82b0-4b0aeb15dc1a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeDriver.java" afterPath="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeDriver.java" />
+    <list default="true" readonly="true" id="e6e006b1-bd0c-4127-82b0-4b0aeb15dc1a" name="Default" comment="Add delimiter of if statements">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ankus.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/NumericStatsDriver.java" changelist="e6e006b1-bd0c-4127-82b0-4b0aeb15dc1a" time="1385352468039" ignored="false" />
-    <file path="/Dummy.txt" changelist="e6e006b1-bd0c-4127-82b0-4b0aeb15dc1a" time="1385455147846" ignored="false" />
+    <file path="/Dummy.txt" changelist="e6e006b1-bd0c-4127-82b0-4b0aeb15dc1a" time="1385707707361" ignored="false" />
     <file path="/NominalStatsDriver.java" changelist="e6e006b1-bd0c-4127-82b0-4b0aeb15dc1a" time="1385352597944" ignored="false" />
     <file path="/CertaintyFactorSumDriver.java" changelist="e6e006b1-bd0c-4127-82b0-4b0aeb15dc1a" time="1385352627211" ignored="false" />
     <file path="/RecommendationDriver.java" changelist="e6e006b1-bd0c-4127-82b0-4b0aeb15dc1a" time="1385352935360" ignored="false" />
@@ -85,6 +86,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="ID3AttributeSplitMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3AttributeSplitMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="8" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ID3FinalClassifyingMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3FinalClassifyingMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="13" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RuleTree.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/RuleTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="13" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RuleTreeMgr.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/RuleTreeMgr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="13" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EMClusterAssignFinalMapper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/em/EMClusterAssignFinalMapper.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,75 +131,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooleanSetDriver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/booleanset/BooleanSetDriver.java">
+      <file leaf-file-name="CFBasedSimilarityMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/recommendation/similarity/cfbased/CFBasedSimilarityMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="13" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0">
+            <state line="38" column="13" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooleanSetMapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/booleanset/BooleanSetMapper.java">
+      <file leaf-file-name="EntropyInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/EntropyInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="13" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0">
+            <state line="34" column="9" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NormalizeDriver.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeDriver.java">
+      <file leaf-file-name="InformationGain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/InformationGain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="22" selection-start="3260" selection-end="3260" vertical-scroll-proportion="0.88687783">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NumericSetDriver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/numericset/NumericSetDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="13" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KMeansDriver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/kmeans/KMeansDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="3214" selection-end="3214" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EMDriver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/em/EMDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="13" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ID3Driver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3Driver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="13" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecommendationDriver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/recommendation/recommender/driver/RecommendationDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="13" selection-start="3171" selection-end="3171" vertical-scroll-proportion="0.0">
+            <state line="27" column="13" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -171,7 +161,16 @@
       <file leaf-file-name="NormalizeMapper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="13" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0">
+            <state line="46" column="13" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RuleNodeBaseInfo.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/RuleNodeBaseInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="13" selection-start="990" selection-end="990" vertical-scroll-proportion="0.046296295">
               <folding />
             </state>
           </provider>
@@ -184,14 +183,25 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/recommendation/similarity/contentbased/ContentBasedSimilarityDriver.java" />
         <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/booleanset/BooleanSetDriver.java" />
         <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/numericset/NumericSetDriver.java" />
         <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/stringset/StringSetDriver.java" />
-        <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/em/EMDriver.java" />
         <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3Driver.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/verify/recommendation/prediction/PredictionForVerifyDriver.java" />
@@ -203,6 +213,8 @@
         <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/statistics/numericstats/NumericStatsDriver.java" />
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeDriver.java" />
+        <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/em/EMDriver.java" />
+        <option value="$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeMapper.java" />
       </list>
     </option>
   </component>
@@ -266,7 +278,7 @@
     <option name="width" value="1440" />
     <option name="height" value="834" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -294,6 +306,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -477,6 +490,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ankus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1104,138 +1121,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ankus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ankus-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ankus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.validation" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../flamingo" />
+    <property name="options.lastSelected" value="settings.github" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="350">$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/kmeans/KMeansDriver.java</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1274,19 +1212,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1313,6 +1238,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1375,6 +1313,7 @@
     <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="false">$USER_HOME$/.subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="SvnFileUrlMappingImpl">
     <option name="myMappingRoots">
@@ -1385,11 +1324,11 @@
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
           <option name="myVcsRoot" value="$PROJECT_DIR$/ankus-core" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/core" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/ankus-core" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
           <option name="myVcsRoot" value="$PROJECT_DIR$/ankus-generate" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/generate" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/ankus-generate" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -1432,39 +1371,43 @@
       <created>1385455150101</created>
       <updated>1385455150101</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add delimiter of if statements">
+      <created>1385707405654</created>
+      <updated>1385707405654</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="834" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913166" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277311" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08873239" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277311" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08757062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969433" sideWeight="0.7887324" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33931133" sideWeight="0.6722689" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30272597" sideWeight="0.67086834" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21008404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30272597" sideWeight="0.6722689" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20903955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1499,7 +1442,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -1509,7 +1452,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add delimiter of if statements" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1530,48 +1473,77 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/statistics/numericstats/NumericStatsDriver.java">
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/kmeans/KMeansDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="9" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0">
+        <state line="72" column="0" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/pom.xml">
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="25" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+        <state line="87" column="22" selection-start="3247" selection-end="3247" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/util/ConfigurationVariable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="97.55556">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="89" column="42" selection-start="2981" selection-end="2997" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/em/EMDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="864" selection-end="907" vertical-scroll-proportion="0.0">
+        <state line="86" column="72" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-generate/pom.xml">
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3ComputeEntropyReducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="40" column="13" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="13" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3FinalClassifyingMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="13" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/EntropyInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="9" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/InformationGain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/RuleTreeMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1583,71 +1555,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/booleanset/BooleanSetDriver.java">
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/recommendation/similarity/cfbased/CFBasedSimilarityMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="13" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0">
+        <state line="38" column="13" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/booleanset/BooleanSetMapper.java">
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/RuleTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0">
+        <state line="27" column="13" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3AttributeSplitMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="8" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0">
+        <state line="46" column="13" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/recommendation/recommender/driver/RecommendationDriver.java">
+    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/rulestructure/RuleNodeBaseInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="13" selection-start="3171" selection-end="3171" vertical-scroll-proportion="0.0">
+        <state line="27" column="13" selection-start="990" selection-end="990" vertical-scroll-proportion="0.046296295">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/correlation/numericset/NumericSetDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/kmeans/KMeansDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="3214" selection-end="3214" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/clustering/em/EMDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/classification/id3/ID3Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="13" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ankus-core/src/main/java/org/ankus/mapreduce/algorithms/preprocessing/normalize/NormalizeDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="22" selection-start="3260" selection-end="3260" vertical-scroll-proportion="0.88687783">
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>core</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ankus</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: commons-collections:commons-collections:3.2.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 
