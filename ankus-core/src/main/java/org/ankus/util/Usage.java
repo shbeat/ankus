@@ -38,12 +38,14 @@ public class Usage {
 
         String ankusVersionJarName = "ankus-core-0.1.jar";
         String delimiterSeparateValues = "< {tab | comma | colon} >";
+        String subDelimiterSeparateValues = "< {tab | comma | colon} >";
 
         // Each algorithms description
         String description = null;
         // Each algorithms parameter
         StringBuffer parameters = new StringBuffer();
 
+        // Correlation modules
         if(algorithm.equals(Constants.ALGORITHM_BOOLEAN_DATA_CORRELATION)){
             description = "BooleanSet driver based on map/reduce program that computes the data of the boolean set in the input files.";
             parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
@@ -74,8 +76,9 @@ public class Usage {
             parameters.append("           [" + ArgumentsConstants.ALGORITHM_OPTION + " <{ edit | hamming }>]\n");
             parameters.append("           [" + ArgumentsConstants.DELIMITER + " " + delimiterSeparateValues + "]\n");
 
+        // CF(Collaborative Filtering) based similarity modules
         }else if(algorithm.equals(Constants.ALGORITHM_COLLABORATIVE_FILTERING_BASED_SIMILARITY)){
-            description = "Collaborative filtering CF based on map/reduce program that computes the data of the data set in the input files.";
+            description = "Collaborative filtering based on map/reduce program that computes the data of the data set in the input files.";
             parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
             parameters.append("\n");
             parameters.append("           [" + ArgumentsConstants.INPUT_PATH + " <path>]\n");
@@ -84,6 +87,19 @@ public class Usage {
             parameters.append("           [" + ArgumentsConstants.ALGORITHM_OPTION + " <{ cosine | pearson }>]\n");
             parameters.append("           [" + ArgumentsConstants.DELIMITER + " " + delimiterSeparateValues + "]\n");
 
+       // Content based similarity modules
+        }else if(algorithm.equals(Constants.ALGORITHM_CONTENT_BASED_SIMILARITY)){
+            description = "Content based on map/reduce program that computes the data of the data set in the input files.";
+            parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
+            parameters.append("\n");
+            parameters.append("           [" + ArgumentsConstants.INPUT_PATH + " <path>]\n");
+            parameters.append("           [" + ArgumentsConstants.OUTPUT_PATH + "<path>]\n");
+            parameters.append("           [" + ArgumentsConstants.KEY_INDEX + " <index>]\n");
+            parameters.append("           [" + ArgumentsConstants.ALGORITHM_OPTION + " <{ cosine | pearson }>]\n");
+            parameters.append("           [" + ArgumentsConstants.DELIMITER + " " + delimiterSeparateValues + "]\n");
+            parameters.append("           [" + ArgumentsConstants.SUB_DELIMITER + " " + subDelimiterSeparateValues + "]\n");
+
+        // Content based similarity modules
         }else if(algorithm.equals(Constants.ALGORITHM_RECOMMENDATION)){
             description = "all based recommendation system based on map/reduce program that computes the data of the data set in the input files.";
             parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
@@ -94,6 +110,7 @@ public class Usage {
             parameters.append("           [" + ArgumentsConstants.BASED_TYPE + " <user | item>]\n");
             parameters.append("           [" + ArgumentsConstants.DELIMITER + " " + delimiterSeparateValues + "]\n");
 
+        // Statistics modules
         }else if(algorithm.equals(Constants.ALGORITHM_NUMERIC_STATS)){
             description = "Numeric Statistics Computation based on map/reduce program that computes the data of the data set in the input files.";
             parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
@@ -132,6 +149,7 @@ public class Usage {
             parameters.append("           [" + ArgumentsConstants.MR_JOB_STEP + " <1|2>]  default value: 1\n");
             parameters.append("           [" + ArgumentsConstants.TEMP_DELETE + " <true|false>] default value: true\n");
 
+        // Preprocessing modules
         }else if(algorithm.equals(Constants.ALGORITHM_NORMALIZE)){
             description = "Numeric Data Normalization based on map/reduce program that converts the data of the data set in the input files.";
             parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
@@ -146,6 +164,7 @@ public class Usage {
             parameters.append("           [" + ArgumentsConstants.MR_JOB_STEP + " <1|2>]  default value: 1(for numeric stats)\n");
             parameters.append("           [" + ArgumentsConstants.TEMP_DELETE + " <true|false>] default value: true\n");
 
+        // Clustering modules
         }else if(algorithm.equals(Constants.ALGORITHM_KMEANS_CLUSTERING)){
             description = "K-Means Clustering based on map/reduce program that uses the data of the data set in the input files.";
             parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
@@ -161,6 +180,40 @@ public class Usage {
             parameters.append("           [" + ArgumentsConstants.CLUSTER_COUNT + " <count>] default value: 1(do not recommend)\n");
             parameters.append("           [" + ArgumentsConstants.DELIMITER + " " + delimiterSeparateValues + "] default value: tab\n");
             parameters.append("           [" + ArgumentsConstants.TEMP_DELETE + " <true|false>] default value: true\n");
+
+        // Clustering modules
+        }else if(algorithm.equals(Constants.ALGORITHM_EM_CLUSTERING)){
+            description = "EM Clustering based on map/reduce program that uses the data of the data set in the input files.";
+            parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
+            parameters.append("\n");
+            parameters.append("           [" + ArgumentsConstants.INPUT_PATH + " <path>]\n");
+            parameters.append("           [" + ArgumentsConstants.OUTPUT_PATH + " <path>]\n");
+            parameters.append("           [" + ArgumentsConstants.TARGET_INDEX + " <index_list>]\n");
+            parameters.append("      <optional parameter>:\n");
+            parameters.append("           [" + ArgumentsConstants.NOMINAL_INDEX + " <index_list>] default value: -1\n");
+            parameters.append("           [" + ArgumentsConstants.EXCEPTION_INDEX + " <index_list>] default value: -1\n");
+            parameters.append("           [" + ArgumentsConstants.MAX_ITERATION + " <count>] default value: 1(do not recommend)\n");
+            parameters.append("           [" + ArgumentsConstants.CLUSTER_COUNT + " <count>] default value: 1(do not recommend)\n");
+            parameters.append("           [" + ArgumentsConstants.DELIMITER + " " + delimiterSeparateValues + "] default value: tab\n");
+            parameters.append("           [" + ArgumentsConstants.TEMP_DELETE + " <true|false>] default value: true\n");
+
+        // Classification modules
+        }else if(algorithm.equals(Constants.ALGORITHM_ID3_CLASSIFICATION)){
+            description = "EM Classification based on map/reduce program that uses the data of the data set in the input files.";
+            parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
+            parameters.append("\n");
+            parameters.append("           [" + ArgumentsConstants.INPUT_PATH + " <path>]\n");
+            parameters.append("           [" + ArgumentsConstants.OUTPUT_PATH + " <path>]\n");
+            parameters.append("           [" + ArgumentsConstants.CLASS_INDEX + " <class_index>])\n");
+            parameters.append("      <optional parameter>:\n");
+            parameters.append("           [" + ArgumentsConstants.TARGET_INDEX + " <index_list>]\n");
+            parameters.append("           [" + ArgumentsConstants.EXCEPTION_INDEX + " <index_list>] default value: -1\n");
+            parameters.append("           [" + ArgumentsConstants.MIN_LEAF_DATA + " <count>] default value: 1\n");
+            parameters.append("           [" + ArgumentsConstants.PURITY + " <purity>] default value: 0.75\n");
+            parameters.append("           [" + ArgumentsConstants.FINAL_RESULT_GENERATION + " <true|false>] default value: false\n");
+            parameters.append("           [" + ArgumentsConstants.DELIMITER + " " + delimiterSeparateValues + "] default value: tab\n");
+
+
         }else if(algorithm.equals(Constants.ALGORITHM_RMSE)){
             //TODO description about RMSE
         }
