@@ -26,6 +26,7 @@ import org.slf4j.LoggerFactory;
  *      Display format of commands
  * @version 0.0.1
  * @date : 2013.08.10
+ * @modify : 2013.12.10
  * @author Suhyun Jeon
  */
 public class Usage {
@@ -35,7 +36,7 @@ public class Usage {
 
     public static void printUsage(String algorithm){
 
-        String ankusVersionJarName = "ankus-core-0.0.1.jar";
+        String ankusVersionJarName = "ankus-core-0.1.jar";
         String delimiterSeparateValues = "< {tab | comma | colon} >";
 
         // Each algorithms description
@@ -88,9 +89,9 @@ public class Usage {
             parameters.append(" hadoop jar " + ankusVersionJarName + " " + algorithm + " ");
             parameters.append("\n");
             parameters.append("           [" + ArgumentsConstants.INPUT_PATH + " <path>]\n");
-            parameters.append("           [" + ArgumentsConstants.SIMILARITY_DATA_INPUT + " <index>]\n");
             parameters.append("           [" + ArgumentsConstants.OUTPUT_PATH + " <path>]\n");
-            parameters.append("           [" + ArgumentsConstants.BASED_TYPE + " <user | item | content>]\n");
+            parameters.append("           [" + ArgumentsConstants.SIMILARITY_DATA_INPUT + " <index>]\n");
+            parameters.append("           [" + ArgumentsConstants.BASED_TYPE + " <user | item>]\n");
             parameters.append("           [" + ArgumentsConstants.DELIMITER + " " + delimiterSeparateValues + "]\n");
 
         }else if(algorithm.equals(Constants.ALGORITHM_NUMERIC_STATS)){
