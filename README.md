@@ -31,7 +31,7 @@ OUR GOAL is, machine learning and data mining library on top of Apache Hadoop us
 3) Support basic statistics and pre-processing methods  
 4) Support attributes selection for analysis  
 
-Architecture  
+## Architecture  
 ![Alt text](http://www.openankus.org/download/attachments/1736818/image2013-7-11%209-31-24.png?version=1&modificationDate=1375342093394&api=v2 "Ankus architecture")
 
 
@@ -48,3 +48,17 @@ See! It's wiki! (Manual and more detail) http://www.openankus.org/
 Only download jar files https://sourceforge.net/projects/ankus/files/?source=navbar
 
 Demo video http://youtu.be/gx8i4X82QfQ
+
+## License
+Apache License 2.0  
+
+
+## For Korean
+Ankus는 Hadoop MapReduce 기반 환경에서 운용할 수 있는 데이터 마이닝/기계학습 라이브러리 입니다. 
+Apache Mahout과 동일한 목적이나 Mahout은 Sequence 파일로의 변환과 다양한 분석 실험을 위한 파라미터들의 설정이 복잡하고, 접근방법이 어렵습니다.
+반면 Ankus는 분석 수행 관점에서 아래와 같이 사용이 가능합니다.  
+1) 입력 파일을 별도의 변환 없이 그대로 사용 가능  
+2) 다양한 파라미터들을 설정하여 여러 관점에서 분석 가능  
+3) 정규화 같은 입력 값의 전처리 등을 수행 할 수 있도록 하는데 더 중점을 둠  
+
+빅데이터 환경에서 그동안 어려웠던 마이닝/기계학습 분석을  더욱 쉽게 분석해볼 수 있는 오픈소스 라이브러리입니다.  
