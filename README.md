@@ -1,9 +1,9 @@
-What is Ankus?  
+# What is Ankus?  
 
 November 29, 2013  
 We released ankus 0.1 (branch : new_ankus-0.1)  
 
-New features of ankus 0.1  
+## New features of ankus 0.1  
 1) Classification - ID3  
 2) Clustering - EM  
 3) Similarity - Content based Similarity  
@@ -16,7 +16,7 @@ Ankus is an open source data mining / machine learning based MapReduce that supp
 
 OUR GOAL is, machine learning and data mining library on top of Apache Hadoop using the map/reduce paradigm. And they are an open source project.
 
-Supoort algorithms.
+## Supoort algorithms
 
 1) Basic statistics computation for numeric/nominal data (3 methods)  
 2) Pre-processing (Normalization, 1 method)  
@@ -24,7 +24,7 @@ Supoort algorithms.
 4) Classification/clustering analysis (3 methods)  
 5) CF based recommendation analysis (4 methods)  
 
-Feautures
+## Feautures
 
 1) Can use without input-file conversion  
 2) Support various parameters for algorithms  
@@ -36,6 +36,8 @@ Architecture
 
 
 Currently, we release Ankus 0.1 version on November, 2013
+
+## Community
 
 Join community forum! https://www.facebook.com/groups/openankus
 
