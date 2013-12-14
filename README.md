@@ -5,8 +5,8 @@ We released ankus 0.1 (branch : new_ankus-0.1)
 
 
 ## Official Release
-0.1 - current stable version  
-0.0.1 - first stable version but missing ID3, EM, Content based Similarity modules.  
+ankus 0.1 - current stable version  
+ankus 0.0.1 - first stable version but missing ID3, EM, Content based Similarity modules.  
 
 
 ## New features of ankus 0.1  
