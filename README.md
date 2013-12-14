@@ -3,13 +3,18 @@
 November 29, 2013  
 We released ankus 0.1 (branch : new_ankus-0.1)  
 
+
+## Official Release
+0.1 - current stable version  
+0.0.1 - first stable version but missing ID3, EM, Content based Similarity modules.  
+
+
 ## New features of ankus 0.1  
 1) Classification - ID3  
 2) Clustering - EM  
 3) Similarity - Content based Similarity  
 4) Recommendation System - Item based recommendation  
 5) Recommendation verify module(use RMSE)  
-
 
 
 Ankus is an open source data mining / machine learning based MapReduce that supports a variety of advanced algorithms. Apache Mahout have the same goal with us, Mahout complicated convert to Sequence files and configure parameters for a wide variety of machine learning algorithms. But as Ankus can see below, Almost do not need to generate input dataset POV(Point of view) analysis as set up a variety of custom parameters Focus on the pre-processing as normalization dataset
