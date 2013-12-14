@@ -32,7 +32,8 @@ Feautures
 4) Support attributes selection for analysis  
 
 Architecture  
-[[http://www.openankus.org/download/attachments/1736818/image2013-7-11%209-31-24.png?version=1&modificationDate=1375342093394&api=v2]]
+![Alt text](http://www.openankus.org/download/attachments/1736818/image2013-7-11%209-31-24.png?version=1&modificationDate=1375342093394&api=v2 "Ankus architecture")
+
 
 Currently, we release Ankus 0.1 version on November, 2013
 
