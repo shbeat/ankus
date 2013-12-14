@@ -18,18 +18,23 @@ OUR GOAL IS, Machine learning and data mining library on top of Apache Hadoop us
 
 Supoort algorithms.
 
-Basic statistics computation for numeric/nominal data (3 methods)
-Pre-processing (Normalization, 1 method)
-Similarity/correlation analysis for vector type data (3 methods)
-Classification/clustering analysis (3 methods)
-CF based recommendation analysis (4 methods)
-Feauture
+1) Basic statistics computation for numeric/nominal data (3 methods)  
+2) Pre-processing (Normalization, 1 method)  
+3) Similarity/correlation analysis for vector type data (3 methods)  
+4) Classification/clustering analysis (3 methods)  
+5) CF based recommendation analysis (4 methods)  
 
-Can use without input-file conversion
-Support various parameters for algorithms
-Support basic statistics and pre-processing methods
-Support attributes selection for analysis
-Currently, we release Ankus 0.0.1 version on 12, September, 2013
+Feautures
+
+1) Can use without input-file conversion  
+2) Support various parameters for algorithms  
+3) Support basic statistics and pre-processing methods  
+4) Support attributes selection for analysis  
+
+Architecture  
+[[http://www.openankus.org/download/attachments/1736818/image2013-7-11%209-31-24.png?version=1&modificationDate=1375342093394&api=v2]]
+
+Currently, we release Ankus 0.1 version on November, 2013
 
 Join community forum! https://www.facebook.com/groups/openankus
 
