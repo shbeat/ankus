@@ -52,7 +52,6 @@ public class CalculationCFBasedSimilarityMapper extends Mapper<LongWritable, Tex
         String row = value.toString();
         String[] columns = row.split(delimiter);
 
-        System.out.println("");
         String id1 = columns[0];
         String id2 = columns[1];
         String item = columns[2];
