@@ -139,42 +139,6 @@ public class ID3ComputeEntropyReducer extends Reducer<Text, Text, NullWritable, 
         e.entropy = getEntropy(sumArr, totSum, igArr);
     }
 
-//    private EntropyInfo computeIGVal(HashMap<String, Integer> classDistList[])
-//    {
-//        EntropyInfo retVal = new EntropyInfo();
-//
-//        int valCnt = classDistList.length;
-//
-//        int sumArr[] = new int[valCnt];
-//        double igArr[] = new double[valCnt];
-//        int maxArr[] = new int[valCnt];
-//        int totSum = 0;
-//
-//        for(int i=0; i<valCnt; i++)
-//        {
-//            int classCnt = classDistList[i].size();
-//            Integer classArr[] = new Integer[classCnt];
-//            classArr = classDistList[i].values().toArray(classArr);
-//
-//            sumArr[i] = 0;
-//            int classArrInt[] = new int[classCnt];
-//            for(int k=0; k<classCnt; k++)
-//            {
-//                classArrInt[k] = classArr[k];
-//                sumArr[i] += classArrInt[k];
-//                if(maxArr[i] < classArrInt[k]) maxArr[i] = classArrInt[k];
-//            }
-//            igArr[i] = getInformationValue(classArrInt, sumArr[i]);
-//
-//            totSum += sumArr[i];
-//        }
-//
-//        retVal.addAttributeDist(sumArr, maxArr);
-//        retVal.entropy = getEntropy(sumArr, totSum, igArr);
-//
-//        return retVal;
-//    }
-
     private double getInformationValue(int[] classDist, int sum)
     {
         double val = 0.0;
