@@ -75,17 +75,10 @@ public class ContentBasedSimilarityMapper extends Mapper<LongWritable, Text, Tex
 
         String[] indexListSplit = indexList.split(subDelimiter);
 
-        System.out.println("delimiter : "+delimiter);
-        System.out.println("subDelimiter : "+subDelimiter);
-
         for(int i=0; i<columns.length; i++){
             String column = columns[i];
 
-            System.out.println("columns : "+column);
-
             for (String data : indexListSplit) {
-
-                System.out.println("indexListSplit : "+indexListSplit);
 
                 if(i == Integer.parseInt(data)){
                     indexListStringBuffer.append(column + "\t");

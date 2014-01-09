@@ -17,6 +17,9 @@
  */
 package org.ankus.mapreduce.algorithms.classification.rulestructure;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * InformationGain
  * @desc
@@ -29,6 +32,10 @@ public class InformationGain {
 
     private static double m_log2 = Math.log(2);
 
+    // SLF4J Logging
+    private static Logger logger = LoggerFactory.getLogger(InformationGain.class);
+
+
     public static void main(String args[])
     {
         int sumArr[] = new int[3];
@@ -38,25 +45,23 @@ public class InformationGain {
         sumArr[0] = 0;
         for(int c: classDist_0) sumArr[0] += c;
         igArr[0] = getInformationValue(classDist_0, sumArr[0]);
-        System.out.println("IG-1: " + igArr[0]);
+        logger.info("IG-1: " + igArr[0]);
 
         int classDist_1[] = {4,0,0,0,0,0,0,1};
         sumArr[1] = 0;
         for(int c: classDist_1) sumArr[1] += c;
         igArr[1] = getInformationValue(classDist_1, sumArr[1]);
-        System.out.println("IG-2: " + igArr[1]);
+        logger.info("IG-2: " + igArr[1]);
 
         int classDist_2[] = {3,3,0,3};
         sumArr[2] = 0;
         for(int c: classDist_2) sumArr[2] += c;
         igArr[2] = getInformationValue(classDist_2, sumArr[2]);
-        System.out.println("IG-3: " + igArr[2]);
-
-
+        logger.info("IG-3: " + igArr[2]);
 
         int totSum = 0;
         for(int c: sumArr) totSum += c;
-        System.out.println("E: " + getEntropy(sumArr, totSum, igArr));
+        logger.info("E: " + getEntropy(sumArr, totSum, igArr));
 
     }
 
@@ -80,7 +85,7 @@ public class InformationGain {
 
         for(int i=0; i<attrSumArr.length; i++)
         {
-            System.out.println(attrSumArr[i] + " : " + IGArr[i]);
+            logger.info(attrSumArr[i] + " : " + IGArr[i]);
             val = val + ((double)attrSumArr[i] / (double)totalSum * IGArr[i]);
         }
 
